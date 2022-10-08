@@ -41,6 +41,9 @@ body {
       .text{
         font-size: calc($fontSizeText);
       }
+      .font{
+        font-size: calc($fontSizeText);
+      }
       .buttonClicks{
         top: calc(50% - 48px + $buttonTop);
       }
@@ -53,6 +56,9 @@ body {
       .text{
         font-size: calc($fontSizeText*1.25);
       }
+      .font{
+        font-size: calc($fontSizeText*1.25);
+      }
       .buttonClicks{
         top: calc(50% - 48px + $buttonTop*1.5);
       }
@@ -63,6 +69,9 @@ body {
         font-size: calc($fontSizeTitle*1.5);
       }
       .text{
+        font-size: calc($fontSizeText*1.5);
+      }
+      .font{
         font-size: calc($fontSizeText*1.5);
       }
       .buttonClicks{
@@ -142,19 +151,6 @@ body {
           left: 0;
       }
     }
-
-    .font-s{
-      //font-size: ;
-    }
-
-    .font-m{
-
-    }
-
-    .font-b{
-
-    }
-
 }
 
 .module{
@@ -287,7 +283,7 @@ line-height: 150%;
     position: absolute;
 width: 380px;
 height: 24px;
-left: calc(50% - 380px/2 - 175px);
+left: calc(50% - 380px/2);
 top: calc(50% - 24px/2 + 37px);
 
 /* Body Copy */
@@ -315,6 +311,7 @@ line-height: 150%;
 
   background: #E4C1AE;
   border-radius: 32px;
+  border: 0;
 }
 
 .overlay{
@@ -361,8 +358,19 @@ top: calc(50% - 98px/2);
   position: absolute;
   width: 24px;
   height: 24px;
-  left: calc(50% - 24px/2 + 1116px/2);
+  left: calc(50% - 24px/2 + 800px/2);
   top: calc(50% - 24px/2 - 210px/4);
 
   background: #121212;
+}
+
+.reset{
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: calc(50% - 64px/2 + 800px/2);
+  top: calc(50% - 64px/2 + 210px/4);
+  &.hidden{
+    visibility: hidden;
+  }
 }

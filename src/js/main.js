@@ -6,12 +6,33 @@ var list = document.body.classList;
 
 
 //button
-$('.buttonClicks').addEventListener('click', function () {
+$('.buttonClicks').addEventListener('click', () => {
     $('.overlay').classList.remove('hidden');
-	$('.alert').classList.remove('hidden')
+	$('.alert').classList.remove('hidden');
+	localStorage.setItem('clicks', parseInt(localStorage.getItem('clicks'))+1)
+	$('.alText').innerHTML = 'You have clicked <b>' + localStorage.getItem('clicks') + ' </b>times to related button';
+	if(parseInt(localStorage.getItem('clicks'))==5){
+		$('.reset').classList.remove('hidden');
+	}
 });
 
-$('.xButton').addEventListener('click', function () {
+$('.reset').addEventListener('click', () => {
+	$('.reset').classList.add('hidden')
+	localStorage.setItem('clicks', 0)
+	$('.alText').innerHTML = 'You have clicked <b>' + localStorage.getItem('clicks') + ' </b>times to related button';
+});
+
+$('.overlay').addEventListener('click', () => {
+    $('.overlay').classList.add('hidden');
+	$('.alert').classList.add('hidden')
+});
+
+$('.xButton').addEventListener('click', () => {
+    $('.overlay').classList.add('hidden');
+	$('.alert').classList.add('hidden')
+});
+
+$('.overlay').addEventListener('click', () => {
     $('.overlay').classList.add('hidden');
 	$('.alert').classList.add('hidden')
 });

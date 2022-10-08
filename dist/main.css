@@ -28,6 +28,9 @@ body.font-s .title {
 body.font-s .text {
   font-size: 16px;
 }
+body.font-s .font {
+  font-size: 16px;
+}
 body.font-s .buttonClicks {
   top: calc(50% - 48px + 125px);
 }
@@ -37,6 +40,9 @@ body.font-m .title {
 body.font-m .text {
   font-size: 20px;
 }
+body.font-m .font {
+  font-size: 20px;
+}
 body.font-m .buttonClicks {
   top: calc(50% - 48px + 187.5px);
 }
@@ -44,6 +50,9 @@ body.font-b .title {
   font-size: 63px;
 }
 body.font-b .text {
+  font-size: 24px;
+}
+body.font-b .font {
   font-size: 24px;
 }
 body.font-b .buttonClicks {
@@ -111,6 +120,7 @@ body.font-b .buttonClicks {
   background-color: black;
   left: 0;
 }
+
 .module {
   font-size: 10px;
 }
@@ -234,7 +244,7 @@ body.font-b .buttonClicks {
   position: absolute;
   width: 380px;
   height: 24px;
-  left: calc(50% - 190px - 175px);
+  left: calc(50% - 190px);
   top: calc(50% - 12px + 37px);
   /* Body Copy */
   font-family: "Roboto";
@@ -256,6 +266,7 @@ body.font-b .buttonClicks {
   top: calc(50% - 48px + 125px);
   background: #E4C1AE;
   border-radius: 32px;
+  border: 0;
 }
 
 .overlay {
@@ -297,8 +308,19 @@ body.font-b .buttonClicks {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: calc(50% - 12px + 558px);
+  left: calc(50% - 12px + 400px);
   top: calc(50% - 12px - 52.5px);
   background: #121212;
+}
+
+.reset {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: calc(50% - 32px + 400px);
+  top: calc(50% - 32px + 52.5px);
+}
+.reset.hidden {
+  visibility: hidden;
 }
 /*# sourceMappingURL=main.css.map */
