@@ -1,2 +1,304 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100%;
+}
 
+body {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.15s ease-out;
+}
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+body.contrast-theme {
+  background-color: black;
+  color: #FF0;
+}
+body.font-s .title {
+  font-size: 42px;
+}
+body.font-s .text {
+  font-size: 16px;
+}
+body.font-s .buttonClicks {
+  top: calc(50% - 48px + 125px);
+}
+body.font-m .title {
+  font-size: 52.5px;
+}
+body.font-m .text {
+  font-size: 20px;
+}
+body.font-m .buttonClicks {
+  top: calc(50% - 48px + 187.5px);
+}
+body.font-b .title {
+  font-size: 63px;
+}
+body.font-b .text {
+  font-size: 24px;
+}
+body.font-b .buttonClicks {
+  top: calc(50% - 48px + 250px);
+}
+
+.change-theme-btn {
+  font: inherit;
+  padding: 0.1em 0.25em;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+}
+.change-theme-btn.dark {
+  left: calc(100% - 150px);
+}
+.change-theme-btn.contrast {
+  left: calc(100% - 102px);
+}
+.change-theme-btn.font {
+  left: calc(100% - 48px);
+}
+.change-theme-btn::before, .change-theme-btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transition: all 0.15s ease-out;
+}
+.change-theme-btn::after {
+  background-color: #fff;
+  left: 100%;
+}
+.change-theme-btn:hover {
+  text-decoration: underline;
+}
+.dark-theme .change-theme-btn {
+  color: #333;
+}
+.dark-theme .change-theme-btn::before {
+  left: -100%;
+}
+.dark-theme .change-theme-btn::after {
+  left: 0;
+}
+.contrast-theme .change-theme-btn {
+  color: #FF0;
+}
+.contrast-theme .change-theme-btn::before {
+  left: -100%;
+}
+.contrast-theme .change-theme-btn::after {
+  background-color: black;
+  left: 0;
+}
+.module {
+  font-size: 10px;
+}
+
+.buttons {
+  position: absolute;
+  width: 300px;
+  height: 48px;
+  left: calc(50% - 125px);
+  top: 40px;
+}
+.buttons .media {
+  width: 100%;
+}
+.buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  outline: none;
+  padding: 0;
+  width: 48px;
+  float: left;
+}
+
+#play {
+  background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
+}
+#play.played {
+  background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play1.svg);
+}
+
+#pause {
+  background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
+}
+#pause.paused {
+  background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause1.svg);
+}
+
+#stop {
+  background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop.svg);
+}
+#stop.stopped {
+  background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop1.svg);
+}
+
+.img {
+  position: absolute;
+  left: 230px;
+  top: 96px;
+}
+
+.module {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: 960px;
+}
+
+.right {
+  position: absolute;
+  width: 380px;
+  height: 250px;
+  left: 830px;
+  top: 136px;
+}
+
+.title {
+  position: absolute;
+  width: 380px;
+  height: 50px;
+  left: calc(50% - 190px);
+  top: calc(50% - 25px - 96px);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 120%;
+}
+.title.alTitle {
+  position: absolute;
+  width: 380px;
+  height: 50px;
+  left: calc(50% - 190px);
+  top: 0;
+  /* T1 */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.text {
+  position: absolute;
+  width: 380px;
+  height: 96px;
+  left: calc(50% - 190px);
+  top: calc(50% - 48px);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+}
+.text.buttonTxt {
+  width: 48px;
+  height: 16px;
+  left: calc(50% - 24px);
+  top: calc(50% - 8px);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.text.alText {
+  position: absolute;
+  width: 380px;
+  height: 24px;
+  left: calc(50% - 190px - 175px);
+  top: calc(50% - 12px + 37px);
+  /* Body Copy */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.buttonClicks {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 40px;
+  gap: 10px;
+  position: absolute;
+  width: 128px;
+  height: 48px;
+  left: 0;
+  top: calc(50% - 48px + 125px);
+  background: #E4C1AE;
+  border-radius: 32px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #121212;
+  opacity: 0.5;
+  z-index: 10;
+}
+.overlay.hidden {
+  visibility: hidden;
+}
+
+.alert {
+  position: absolute;
+  width: 920px;
+  height: 210px;
+  left: calc(50% - 460px);
+  top: calc(50% - 105px);
+  background: #FFFFFF;
+  z-index: 11;
+}
+.alert.hidden {
+  visibility: hidden;
+}
+
+.alContent {
+  position: absolute;
+  width: 380px;
+  height: 98px;
+  left: calc(50% - 190px - 177.5px);
+  top: calc(50% - 49px);
+}
+
+.xButton {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: calc(50% - 12px + 558px);
+  top: calc(50% - 12px - 52.5px);
+  background: #121212;
+}
 /*# sourceMappingURL=main.css.map */
