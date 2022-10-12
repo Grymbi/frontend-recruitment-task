@@ -80,240 +80,8 @@ body {
     }
 }
 
-.change-theme-btn {
-    font: inherit;
-    padding: 0.1em 0.25em;
-    border: 0;
-    outline: 0;
-    color: $light;
-    cursor: pointer;
-    transition: all 0.15s ease-out;
-    position: absolute;
-    top: 0;
-    background-color: transparent;
-    overflow: hidden;
-    width: 48px;
-    height: 48px;
 
-    &.dark{
-      left: calc(100% - 150px);
-    }
-
-    &.contrast{
-      left: calc(100% - 102px);
-    }
-
-    &.font{
-      left: calc(100% - 48px);
-    }
-
-    &::before, &::after {
-        content: '';
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $dark;
-        transition: all 0.15s ease-out;
-    }
-
-    &::after {
-        background-color: $light;
-        left: 100%;
-    }
-
-    &:hover {
-        text-decoration: underline;
-    }
-
-    .dark-theme & {
-        color: $dark;
-
-        &::before {
-            left: -100%;
-        }
-
-        &::after {
-            left: 0;
-        }
-    }
-    .contrast-theme & {
-      color: $contrast;
-
-      &::before {
-          left: -100%;
-      }
-
-      &::after {
-        background-color: black;
-          left: 0;
-      }
-    }
-}
-
-.module{
-  font-size: 10px;
-}
-
-.buttons {
-	position: absolute;
-  width:300px;
-  height: 48px;
-  left: calc(50% - 250px/2);
-  top: calc(80px/2);
-  & .media{
-    width: 100%;
-  } 
-  & button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    height: 48px;
-    outline: none;
-    padding: 0;
-    width: 48px;
-    float: left;
-  }
-}
-
-#play {
-	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
-  &.played {
-    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play1.svg);
-  }}
-
-#pause {
-	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
-&.paused {
-	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause1.svg);
-}}
-
-#stop {
-	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop.svg);
-&.stopped {
-	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop1.svg);
-}}
-
-.img{
-  position: absolute;
-  //width: 505px;
-  //height: 330px;
-  left: 230px;
-  top: 96px;
-}
-
-.module{
-  position: relative;
-  width: 100%;
-  max-width: 1440px;
-  height: 960px;
-}
-
-.right{
-  position: absolute;
-  width: 380px;
-  height: 250px;
-  left: 830px;
-  top: 136px;
-}
-
-.title{
-  position: absolute;
-width: 380px;
-height: 50px;
-left: calc(50% - 380px/2);
-top: calc(50% - 50px/2 - 96px);
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: $fontSizeTitle;
-line-height: 120%;
-
-  &.alTitle{
-    position: absolute;
-    width: 380px;
-    height: 50px;
-    left: calc(50% - 380px/2);
-    top: 0;
-    
-    /* T1 */
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
-  }
-}
-
-.text{
-position: absolute;
-width: 380px;
-height: 96px;
-left: calc(50% - 380px/2);
-top: calc(50% - 96px/2);
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 300;
-font-size: $fontSizeText;
-line-height: 150%;
-  &.buttonTxt{
-    width: 48px;
-    height: 16px;
-    left: calc(50% - 48px/2);
-    top: calc(50% - 16px/2);
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: $fontSizeText;
-    line-height: 100%;
-
-    color: #FFFFFF;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  }
-
-  &.alText{
-    position: absolute;
-width: 380px;
-height: 24px;
-left: calc(50% - 380px/2);
-top: calc(50% - 24px/2 + 37px);
-
-/* Body Copy */
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 300;
-line-height: 150%;
-  }
-}
-
-.buttonClicks{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 16px 40px;
-  gap: 10px;
-  
-  position: absolute;
-  width: 128px;
-  height: 48px;
-  left: 0;
-  top: calc(50% - 48px + $buttonTop);
-  
-
-  background: #E4C1AE;
-  border-radius: 32px;
-  border: 0;
-}
-
+//overlay+alert
 .overlay{
   position: absolute;
   width: 100%;
@@ -330,28 +98,48 @@ line-height: 150%;
     visibility: hidden;
   }
 }
-
 .alert{
-  position: absolute;
-  width: 920px;
-  height: 210px;
-  left: calc(50% - 920px/2);
-  top: calc(50% - 210px/2);
-
   background: #FFFFFF;
 
   z-index: 11;
   &.hidden{
     visibility: hidden;
   }
-}
-
-.alContent{
+  
   position: absolute;
-width: 380px;
-height: 98px;
-left: calc(50% - 380px/2 - 355px/2);
-top: calc(50% - 98px/2);
+  @media (min-width:920px) {
+    width: 920px;
+    height: 210px;
+    left: calc(50% - 920px/2);
+    top: calc(50% - 210px/2);
+  }
+  @media (max-width:920px) {
+    width: 100%;
+    height: auto;
+    min-height: 210px;
+    left: 0;
+    top: 0;
+  }
+  
+
+}
+.alContent{
+  @media (min-width:920px) {
+    position: absolute;
+    width: 380px;
+    height: 98px;
+    left: calc(50% - 380px/2 - 355px/2);
+    top: calc(50% - 98px/2);
+  }
+  @media (max-width:920px) {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    min-height: 98px;
+    left: 15%;
+    top: calc(50% - 98px/2);
+  }
+  
 }
 
 .xButton{
@@ -374,3 +162,244 @@ top: calc(50% - 98px/2);
     visibility: hidden;
   }
 }
+//
+
+
+//main module
+.module{
+  position: relative;
+  width: 1440px;
+  height: 960px;
+}
+//
+
+
+//WCAG menu
+.buttons {
+  position: absolute;
+  width:300px;
+  height: 48px;
+  left: calc(50% - 300px/2);
+  top: calc(80px/2);
+  & .media{
+    width: 100%;
+  } 
+  & button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    outline: none;
+    padding: 0;
+    width: 48px;
+    float: left;
+  }
+}
+//
+
+//themes and font size buttons
+.change-theme-btn {
+  font: inherit;
+  padding: 0.1em 0.25em;
+  border: 0;
+  outline: 0;
+  color: $light;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+
+  &.dark{
+    left: calc(100% - 150px);
+  }
+
+  &.contrast{
+    left: calc(100% - 102px);
+  }
+
+  &.font{
+    left: calc(100% - 48px);
+  }
+
+  &::before, &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $dark;
+      transition: all 0.15s ease-out;
+  }
+
+  &::after {
+      background-color: $light;
+      left: 100%;
+  }
+
+  &:hover {
+      text-decoration: underline;
+  }
+
+  .dark-theme & {
+      color: $dark;
+
+      &::before {
+          left: -100%;
+      }
+
+      &::after {
+          left: 0;
+      }
+  }
+  .contrast-theme & {
+    color: $contrast;
+
+    &::before {
+        left: -100%;
+    }
+
+    &::after {
+      background-color: black;
+        left: 0;
+    }
+  }
+}
+//
+
+//text2speech buttons
+#play {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
+  &.played {
+    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play1.svg);
+  }}
+
+#pause {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
+&.paused {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause1.svg);
+}}
+
+#stop {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop.svg);
+&.stopped {
+	background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop1.svg);
+}}
+//
+
+
+//image
+  .img{
+    position: absolute;
+    left: 230px;
+    top: 96px;
+  }
+//
+
+//text content
+  .right{
+    position: absolute;
+    width: 380px;
+    height: 250px;
+    left: 830px;
+    top: 136px;
+  }
+
+  //title
+  .title{
+    position: absolute;
+  width: 380px;
+  height: 50px;
+  left: calc(50% - 380px/2);
+  top: calc(50% - 50px/2 - 96px);
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: $fontSizeTitle;
+  line-height: 120%;
+  
+    &.alTitle{
+      position: absolute;
+      width: 380px;
+      height: 50px;
+      left: calc(50% - 380px/2);
+      top: 0;
+      
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+  }
+  
+  //text
+  .text{
+  position: absolute;
+  width: 380px;
+  height: 96px;
+  left: calc(50% - 380px/2);
+  top: calc(50% - 96px/2);
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: $fontSizeText;
+  line-height: 150%;
+    &.buttonTxt{
+      width: 48px;
+      height: 16px;
+      left: calc(50% - 48px/2);
+      top: calc(50% - 16px/2);
+  
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: $fontSizeText;
+      line-height: 100%;
+  
+      color: #FFFFFF;
+  
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+  
+    &.alText{
+      position: absolute;
+      width: 380px;
+      height: 24px;
+      left: calc(50% - 380px/2);
+      top: calc(50% - 24px/2 + 37px);
+  
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+  
+  //click counter button
+  .buttonClicks{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 40px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 128px;
+    height: 48px;
+    left: 0;
+    top: calc(50% - 48px + $buttonTop);
+    
+    background: #E4C1AE;
+    border-radius: 32px;
+    border: 0;
+  }
+//

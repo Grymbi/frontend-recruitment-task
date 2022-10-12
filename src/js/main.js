@@ -11,7 +11,7 @@ $('.buttonClicks').addEventListener('click', () => {
 	$('.alert').classList.remove('hidden');
 	localStorage.setItem('clicks', parseInt(localStorage.getItem('clicks'))+1)
 	$('.alText').innerHTML = 'You have clicked <b>' + localStorage.getItem('clicks') + ' </b>times to related button';
-	if(parseInt(localStorage.getItem('clicks'))==5){
+	if(parseInt(localStorage.getItem('clicks'))>5){
 		$('.reset').classList.remove('hidden');
 	}
 });

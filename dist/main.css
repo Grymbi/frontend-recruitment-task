@@ -59,6 +59,113 @@ body.font-b .buttonClicks {
   top: calc(50% - 48px + 250px);
 }
 
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #121212;
+  opacity: 0.5;
+  z-index: 10;
+}
+.overlay.hidden {
+  visibility: hidden;
+}
+
+.alert {
+  background: #FFFFFF;
+  z-index: 11;
+  position: absolute;
+}
+.alert.hidden {
+  visibility: hidden;
+}
+@media (min-width: 920px) {
+  .alert {
+    width: 920px;
+    height: 210px;
+    left: calc(50% - 460px);
+    top: calc(50% - 105px);
+  }
+}
+@media (max-width: 920px) {
+  .alert {
+    width: 100%;
+    height: auto;
+    min-height: 210px;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media (min-width: 920px) {
+  .alContent {
+    position: absolute;
+    width: 380px;
+    height: 98px;
+    left: calc(50% - 190px - 177.5px);
+    top: calc(50% - 49px);
+  }
+}
+@media (max-width: 920px) {
+  .alContent {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    min-height: 98px;
+    left: 15%;
+    top: calc(50% - 49px);
+  }
+}
+
+.xButton {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: calc(50% - 12px + 400px);
+  top: calc(50% - 12px - 52.5px);
+  background: #121212;
+}
+
+.reset {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: calc(50% - 32px + 400px);
+  top: calc(50% - 32px + 52.5px);
+}
+.reset.hidden {
+  visibility: hidden;
+}
+
+.module {
+  position: relative;
+  width: 1440px;
+  height: 960px;
+}
+
+.buttons {
+  position: absolute;
+  width: 300px;
+  height: 48px;
+  left: calc(50% - 150px);
+  top: 40px;
+}
+.buttons .media {
+  width: 100%;
+}
+.buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  outline: none;
+  padding: 0;
+  width: 48px;
+  float: left;
+}
+
 .change-theme-btn {
   font: inherit;
   padding: 0.1em 0.25em;
@@ -121,31 +228,6 @@ body.font-b .buttonClicks {
   left: 0;
 }
 
-.module {
-  font-size: 10px;
-}
-
-.buttons {
-  position: absolute;
-  width: 300px;
-  height: 48px;
-  left: calc(50% - 125px);
-  top: 40px;
-}
-.buttons .media {
-  width: 100%;
-}
-.buttons button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  height: 48px;
-  outline: none;
-  padding: 0;
-  width: 48px;
-  float: left;
-}
-
 #play {
   background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
 }
@@ -171,13 +253,6 @@ body.font-b .buttonClicks {
   position: absolute;
   left: 230px;
   top: 96px;
-}
-
-.module {
-  position: relative;
-  width: 100%;
-  max-width: 1440px;
-  height: 960px;
 }
 
 .right {
@@ -206,7 +281,6 @@ body.font-b .buttonClicks {
   height: 50px;
   left: calc(50% - 190px);
   top: 0;
-  /* T1 */
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -246,7 +320,6 @@ body.font-b .buttonClicks {
   height: 24px;
   left: calc(50% - 190px);
   top: calc(50% - 12px + 37px);
-  /* Body Copy */
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
@@ -267,60 +340,5 @@ body.font-b .buttonClicks {
   background: #E4C1AE;
   border-radius: 32px;
   border: 0;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background: #121212;
-  opacity: 0.5;
-  z-index: 10;
-}
-.overlay.hidden {
-  visibility: hidden;
-}
-
-.alert {
-  position: absolute;
-  width: 920px;
-  height: 210px;
-  left: calc(50% - 460px);
-  top: calc(50% - 105px);
-  background: #FFFFFF;
-  z-index: 11;
-}
-.alert.hidden {
-  visibility: hidden;
-}
-
-.alContent {
-  position: absolute;
-  width: 380px;
-  height: 98px;
-  left: calc(50% - 190px - 177.5px);
-  top: calc(50% - 49px);
-}
-
-.xButton {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: calc(50% - 12px + 400px);
-  top: calc(50% - 12px - 52.5px);
-  background: #121212;
-}
-
-.reset {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  left: calc(50% - 32px + 400px);
-  top: calc(50% - 32px + 52.5px);
-}
-.reset.hidden {
-  visibility: hidden;
 }
 /*# sourceMappingURL=main.css.map */
